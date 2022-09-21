@@ -11,12 +11,24 @@ import {
 import React from "react";
 import burger1 from "../../image/b3.png";
 
-const PostCard = ({myDirection}) => {
+const PostCard = ({ myDirection }) => {
   return (
     <Box mt={3}>
-      <Link href="#" sx={{ textDecoration: "none" }}>
+      <Link
+        href="http://localhost:3000/details"
+        sx={{ textDecoration: "none" }}
+      >
         <Card>
-          <Box sx={{ display: {xs:"block" ,sm:`${myDirection}`, md:`${myDirection}`}, flexDirection: "row" }}>
+          <Box
+            sx={{
+              display: {
+                xs: "block",
+                sm: `${myDirection}`,
+                md: `${myDirection}`,
+              },
+              flexDirection: "row",
+            }}
+          >
             <CardMedia
               component={"img"}
               height="250"
@@ -25,7 +37,7 @@ const PostCard = ({myDirection}) => {
               sx={{
                 width: "300px",
                 cursor: "pointer",
-                marginLeft:3,
+                marginLeft: 3,
                 "&:hover": {
                   opacity: 0.6,
                   boxSizing: "border-box",
@@ -34,24 +46,22 @@ const PostCard = ({myDirection}) => {
                 },
               }}
             />
-            <CardContent sx={{mt:6}}>
+            <CardContent sx={{ mt: 6 }}>
               <Typography gutterBottom variant="h6" align="center">
                 gros Burger
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
+                industry. Lorem Ipsum is simply dummy text of the printing and
+                typesetting industry. Lorem Ipsum is simply dummy text of the
+                printing and typesetting industry.
               </Typography>
-              <CardActions >
-              <Button sx={{ color: "tomato" }} align="center">
-                Partager
-              </Button>
-              <Button sx={{ color: "tomato" }}>En Savoir Plus</Button>
-            </CardActions>
+              <CardActions>
+                <Button sx={{ color: "tomato" }} align="center">
+                  Partager
+                </Button>
+                <Button sx={{ color: "tomato" }}>En Savoir Plus</Button>
+              </CardActions>
             </CardContent>
           </Box>
         </Card>

@@ -17,7 +17,7 @@ const Footer = () => {
     { name: "S'abonner", link: "#" },
   ];
   return (
-    <Box sx={{bgcolor:"tomato", height:"200px"}}>
+    <Box sx={{bgcolor:"tomato", height:"200px" }}>
       <Container>
         <Stack direction="row">
         <MenuBOx flex={1} sx={{ display: { xs: "none", md: "flex" } }} mt={1}>
