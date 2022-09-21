@@ -11,12 +11,12 @@ import {
 import React from "react";
 import burger1 from "../../image/b3.png";
 
-const PostCard = () => {
+const PostCard = ({myDirection}) => {
   return (
     <Box mt={3}>
       <Link href="#" sx={{ textDecoration: "none" }}>
         <Card>
-          <Box sx={{ display: "flex", flexDirection: "row" }}>
+          <Box sx={{ display: {xs:"block" ,sm:`${myDirection}`, md:`${myDirection}`}, flexDirection: "row" }}>
             <CardMedia
               component={"img"}
               height="250"

@@ -2,13 +2,20 @@ import Fototer from "./components/footer/Footer";
 import Hero from "./components/hero/Hero";
 import Main from "./components/main/Main";
 import Navbar from "./components/navbar/Navbar";
+import Details from "./components/details/Details";
+import {BrowserRouter , Routes, Route} from "react-router-dom"
 
+ 
 function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <Main />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main />}/>
+          <Route path="/details" element={<Details />}/>
+        </Routes>
+      </BrowserRouter>
       <Fototer />
     </>
   );
