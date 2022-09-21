@@ -19,7 +19,7 @@ const PostCard = () => {
           <Box sx={{ display: "flex", flexDirection: "row" }}>
             <CardMedia
               component={"img"}
-              height="300"
+              height="250"
               alt="en attent"
               image={burger1}
               sx={{
