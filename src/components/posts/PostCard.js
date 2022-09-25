@@ -9,13 +9,13 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import burger1 from "../../image/b3.png";
 
-const PostCard = ({ myDirection }) => {
+
+const PostCard = ({ myDirection , title , excerpt , blogHref ,image }) => {
   return (
     <Box mt={3}>
       <Link
-        href="http://localhost:3000/details"
+        href={blogHref}
         sx={{ textDecoration: "none" }}
       >
         <Card>
@@ -33,7 +33,7 @@ const PostCard = ({ myDirection }) => {
               component={"img"}
               height="250"
               alt="en attent"
-              image={burger1}
+              image={image}
               sx={{
                 width: "300px",
                 cursor: "pointer",
@@ -48,13 +48,10 @@ const PostCard = ({ myDirection }) => {
             />
             <CardContent sx={{ mt: 6 }}>
               <Typography gutterBottom variant="h6" align="center">
-                gros Burger
+                {title}
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry. Lorem Ipsum is simply dummy text of the
-                printing and typesetting industry.
+                {excerpt}
               </Typography>
               <CardActions>
                 <Button sx={{ color: "tomato" }} align="center">
